@@ -106,7 +106,7 @@ style: |
 # **Projet de Fin de Formation**
 ### **Digitalisation des Services de Coaching : Développement d’une Solution Web Intégrée de Gestion et de Branding**
 
-**Réalisé par :** solidevs26 
+**Réalisé par :** Adnane Kesksu 
 **Encadré par :** M. ESSARRAJ Fouad  
 **Filière :** Développement Mobile et Web
 
