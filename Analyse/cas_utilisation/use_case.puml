@@ -1,0 +1,40 @@
+@startuml
+title Diagramme de Cas d'Utilisation — 
+
+skinparam actorStyle awesome
+skinparam usecase {
+    BackgroundColor #E8F4FD
+    BorderColor #2980B9
+}
+
+actor "Admin" as Admin
+actor "User" as User
+
+rectangle "Système de Gestion des Terrains de Sport" {
+    usecase "Gérer les terrains" as UC1
+    usecase "Gérer les horaires de réservation" as UC2
+    usecase "Valider une réservation" as UC3
+    usecase "Vérifier la CNI" as UC4
+    usecase "Voir le tableau de bord" as UC5
+
+    usecase "S'inscrire / Se connecter" as UC6
+    usecase "Rechercher un terrain" as UC7
+    usecase "Réserver un créneau" as UC8
+    usecase "Uploader sa CNI" as UC9
+    usecase "Recevoir une confirmation" as UC10
+    usecase "Annuler une réservation" as UC11
+}
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC5
+UC3 ..> UC4 : <<include>>
+
+User --> UC6
+User --> UC7
+User --> UC8
+User --> UC11
+UC8 ..> UC9 : <<include>>
+UC8 ..> UC10 : <<include>>
+@enduml

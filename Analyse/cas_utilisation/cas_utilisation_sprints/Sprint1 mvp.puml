@@ -1,0 +1,34 @@
+@startuml
+title Sprint 1 — MVP | Système de Gestion des Terrains de Sport
+
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor #D5F5E3
+    BorderColor #27AE60
+}
+
+actor "Admin" as Admin
+actor "User" as User
+
+rectangle "Sprint 1 — MVP" {
+    usecase "S'inscrire / Se connecter" as UC1
+    usecase "Gérer les terrains\n(CRUD)" as UC2
+    usecase "Gérer les créneaux" as UC3
+    usecase "Valider une réservation" as UC4
+    usecase "Rechercher un terrain" as UC5
+    usecase "Réserver un créneau" as UC6
+    usecase "Uploader sa CNI" as UC7
+    usecase "Recevoir une confirmation" as UC8
+}
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+
+User --> UC1
+User --> UC5
+User --> UC6
+UC6 ..> UC7 : <<include>>
+UC6 ..> UC8 : <<include>>
+@enduml
