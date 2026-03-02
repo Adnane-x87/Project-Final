@@ -206,16 +206,7 @@ style: |
 
 ---
 
-## Branche Fonctionnelle : Cas d'utilisation
 
-### Global Use Case
-
-<div class="img-container">
-  <h3>Interaction Utilisateur (UML)</h3>
-  <img src="images/use-case.png" class="img-methodo" alt="Use Case">
-</div>
-
----
 
 ## Branche Fonctionnelle : Cas d'utilisation
 
