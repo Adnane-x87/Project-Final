@@ -46,7 +46,7 @@ style: |
     display: flex; justify-content: center; align-items: center;
     border-radius: 50%; font-weight: bold; margin-right: 15px; flex-shrink: 0;
   }
-  
+
   .img-container {
     display: flex;
     flex-direction: column;
@@ -95,7 +95,6 @@ style: |
     align-items: flex-start;
     height: 350px;
   }
-
 ---
 
 <div class="logo-header">
@@ -104,6 +103,7 @@ style: |
 </div>
 
 # **Projet de Fin de Formation**
+
 ### ProMatch — Système de Gestion des Terrains de Sport
 
 **Réalisé par :** <span class="highlight">Adnane Kesksu</span>  
@@ -125,13 +125,16 @@ style: |
 </div>
 
 ---
+
 ## 1. Contexte du projet
+
+- M. Karim est propriétaire d'un complexe sportif de 4 terrains loués à l'heure. Malgré une clientèle fidèle, il gère tout manuellement — appels téléphoniques et cahier manuscrit — ce qui entraîne des créneaux perdus, des doubles réservations et un suivi financier inexistant.
+
+  Ce projet vise à concevoir une plateforme numérique qui automatise les réservations, intègre une vérification d'identité (CNI), et donne au propriétaire un contrôle total sur son complexe.
 
 ---
 
 ## 2. Méthodologie : Design Thinking
-
-
 
 <div class="img-container">
   <img src="./images/designThinking.png" class="img-methodo" alt="Design Thinking">
@@ -141,8 +144,6 @@ style: |
 
 ## Méthodologie : Scrum (Agile)
 
-
-
 <div class="img-container">
   <img src="images/scrum.jpg" class="img-methodo" alt="Scrum">
 </div>
@@ -151,8 +152,6 @@ style: |
 
 ## Méthodologie : Processus 2TUP
 
-
-
 <div class="img-container">
   <img src="images/2TUP.PNG" class="img-methodo" alt="2TUP">
 </div>
@@ -160,15 +159,16 @@ style: |
 ---
 
 ## 3. Branche Fonctionnelle : Design Thinking
+
 ### 1. EMPATHIE
 
 <div class="img-container">
   <div class="dt-card" style="border-top-color: #f39c12;">
     <h4>Comprendre l'utilisateur</h4>
     <blockquote style="font-style: italic; background: white; padding: 15px; border-radius: 8px;">
-      <p>- La formatrice Fatine souhaite un système simple pour créer et gérer des QCM personnalisables, avec correction automatique et affichage du score final.</p>
-      <p>- Le formateur Youssef souhaite un QCM structuré par session et objectif, lié au professeur, avec un calcul automatique des résultats.</p>
-      <p>- L’administrateur Hamouda souhaite une plateforme fiable avec des données validées, un QCM structuré et sécurisé, ainsi qu’une interface simple pour faciliter la gestion des candidats.</p>
+      <p>- Propriétaire : "Observation des difficultés réelles du propriétaire dans la gestion quotidienne : pertes de réservations par téléphone, doubles créneaux et absence totale de suivi financier."</p>
+      <p>- Client / Locataire : "Observation des frustrations du locataire lors de la réservation : temps perdu à rappeler, aucune visibilité sur les disponibilités et risque de trouver un autre groupe sur son terrain."</p>
+      <p>- Staff / Employé : "Observation des difficultés de l'employé sur le terrain : vérification manuelle des réservations à l'accueil, gestion seul des conflits clients et dépendance aux consignes transmises par WhatsApp."</p>
     </blockquote>
   </div>
 </div>
@@ -176,15 +176,15 @@ style: |
 ---
 
 ## Branche Fonctionnelle : Design Thinking
+
 ### 2. DÉFINITION
 
 <div class="img-container">
   <div class="dt-card" style="border-top-color: #f39c12;">
     <h4>Cadrage du problème</h4>
     <blockquote style="font-style: italic; background: white; padding: 15px; border-radius: 8px;">
-     <p> - Comment pourrions-nous permettre aux formateurs de générer des QCM par objectif en quelques clics, tout en garantissant une correction instantanée pour l'étudiant ? </p>
-      <p>- Comment pourrions-nous structurer l'interface pour que la liaison entre une question, un professeur et un objectif de session soit totalement transparente ? </p>
-      <p>-Comment pourrions-nous concevoir une interface administrateur simple, claire et ergonomique permettant une gestion efficace des candidats et des QCM ? </p>
+      "Comment digitaliser la gestion des terrains pour éliminer les pertes de réservations, les conflits de créneaux et la dépendance au téléphone ?"
+      Focus sur : L'automatisation, la vérification d'identité (CNI) et le contrôle en temps réel.
     </blockquote>
   </div>
 </div>
@@ -192,14 +192,15 @@ style: |
 ---
 
 ## Branche Fonctionnelle : Design Thinking
+
 ### 3. IDÉATION
 
 <div class="img-container">
   <div class="dt-card" style="border-top-color: #f39c12;">
     <h4>Solutions retenues</h4>
-    <p>• Interface <strong>"Single Question"</strong> pour éviter la surcharge cognitive.</p>
-    <p>• <strong>Timer dynamique</strong> par catégorie de question.</p>
-    <p>• <strong>Dashboard</strong> temps réel pour le suivi des formateurs.</p>
+    <p>• Plateforme de réservation en ligne 24h/24 pour éliminer le téléphone.</p>
+    <p>• Upload de la CIN avec validation admin avant confirmation du créneau.</p>
+    <p>• Dashboard temps réel pour le suivi des terrains, réservations et revenus.</p>
   </div>
 </div>
 
@@ -207,7 +208,7 @@ style: |
 
 ## Branche Fonctionnelle : Cas d'utilisation
 
-
+### Global Use Case
 
 <div class="img-container">
   <h3>Interaction Utilisateur (UML)</h3>
@@ -215,20 +216,35 @@ style: |
 </div>
 
 ---
-## Branche Fonctionnelle : Maquettes (UI/UX)
 
+## Branche Fonctionnelle : Cas d'utilisation
 
+### Sprint 1 :
 
 <div class="maquette-grid">
   <div style="text-align: center;">
-    <img src="images/maquette.png" class="img-methodo" style="height: 360px; width: auto;" alt="Maquette Desktop">
-    <p style="font-size: 0.3rem; color: #666;">Interface Administration</p>
+    <img src="./images/sprint1.png" alt="Use Case Sprint 1" style="max-height: 350px;">
   </div>
 </div>
 
 ---
 
+## Branche Fonctionnelle : Cas d'utilisation
+
+### sprint 2:
+
+<div class="maquette-grid">
+  <div style="text-align: center;">
+    <img src="./images/sprint2.png" alt="Use Case Sprint 2" style="max-height: 350px;">
+  </div>
+</div>
+
+
+
+---
+
 ## 4. Branche Technique : Tech Stack
+
 <div class="sommaire-grid">
   <div class="dt-card" style="margin-top:0;">
     <h4>Les technologies à utiliser</h4>
@@ -257,9 +273,7 @@ style: |
 
 ---
 
-
 ## 5. Conception : Diagramme de classe
-
 
  <h3>Modélisation des données (MLD)</h3>
 <div class="img-container">
@@ -292,11 +306,12 @@ style: |
 <br>
 
 ---
+
 ## 6. Conclusion
 
-- **Objectifs atteints** : Application QCM fonctionnelle et responsive.
-- **Compétences** : Maîtrise du cycle Agile et de la stack Full-stack.
-- **Perspectives** : Intégration d'un module d'IA pour l'analyse prédictive.
+- **Objectifs atteints** : Plateforme de réservation fonctionnelle avec gestion des terrains et vérification CNI.
+- **Compétences** : Maîtrise du cycle Agile et de la stack Full-stack Laravel.
+- **Perspectives** : Ajout d'un module de paiement en ligne et de statistiques avancées.
 
 <br>
 
