@@ -129,7 +129,8 @@ style: |
 ## 1. Contexte du projet
 
 - M. Karim est propriétaire d'un complexe sportif de 4 terrains loués à l'heure. Malgré une clientèle fidèle, il gère tout manuellement — appels téléphoniques et cahier manuscrit — ce qui entraîne des créneaux perdus, des doubles réservations et un suivi financier inexistant.
-Ce projet vise à concevoir une plateforme numérique qui automatise les réservations, intègre une vérification d'identité (CNI), et donne au propriétaire un contrôle total sur son complexe
+  Ce projet vise à concevoir une plateforme numérique qui automatise les réservations, intègre une vérification d'identité (CNI), et donne au propriétaire un contrôle total sur son complexe
+
 ---
 
 ## 2. Méthodologie : Design Thinking
@@ -203,19 +204,32 @@ Share.</p>
 
 ### Global Use Case
 
-
 <div class="img-container">
   <h3>Interaction Utilisateur (UML)</h3>
-  <img src="" class="img-methodo" alt="Use Case">
+  <img src="./images/use-case.png" class="img-methodo" alt="Use Case">
 </div>
 
 ---
 
-## Branche Fonctionnelle : Maquettes (UI/UX)
+## Branche Fonctionnelle : Cas d'utilisation
+
+### Sprint 1 :
 
 <div class="maquette-grid">
   <div style="text-align: center;">
-    <img src="images/maquette.png" alt="Maquette" style="max-height: 350px;">
+    <img src="./images/sprint1.png" alt="usecas" style="max-height: 350px;">
+  </div>
+</div>
+
+---
+
+## Branche Fonctionnelle : Cas d'utilisation
+
+### sprint 2:
+
+ <div class="maquette-grid">
+  <div style="text-align: center;">
+    <img src="./images/sprint2.png" alt="usecas" style="max-height: 350px;">
   </div>
 </div>
 
@@ -258,7 +272,7 @@ Share.</p>
 
 <h3>Modélisation des données (MLD)</h3>
 <div class="img-container">
-  <img src="images/diagramme-class.png" class="img-methodo" alt="Diagramme de classe">
+  <img src="" class="img-methodo" alt="Diagramme de classe">
 </div>
 
 ---
