@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProMatch — Clients</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'] 
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9f1',
+                            100: '#dcf1df',
+                            200: '#bbe2c3',
+                            300: '#8dca9e',
+                            400: '#5eac72',
+                            500: '#4da565',
+                            600: '#3d8a54',
+                            700: '#327145',
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+    <div class="min-h-screen flex">
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:flex w-64 flex-col fixed inset-y-0 bg-white border-r border-slate-200">
+            
+            <!-- Logo -->
+            <div class="h-20 relative flex items-center justify-center border-b border-slate-100">
+                <a href="../public/index.html" class="block">
+                    <img src="../public/images/logo.png" alt="ProMatch Logo" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-auto max-w-none">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 px-4 py-6 space-y-1">
+                <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                    Tableau de bord
+                </a>
+                <a href="./reservations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    Réservations
+                </a>
+                <a href="./validations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Validations CNI
+                    <span class="ml-auto w-5 h-5 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">2</span>
+                </a>
+                <!-- Active: Clients -->
+                <a href="./clients.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg bg-brand-50 text-brand-700">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    Clients
+                </a>
+                <a href="../public/index.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    Accueil
+                </a>
+                <a href="../public/booking.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                    Nouvelle réservation
+                </a>
+            </nav>
+
+            <!-- User -->
+            <div class="p-4 border-t border-slate-100">
+                <div class="flex items-center gap-3">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=random" alt="Admin" class="w-9 h-9 rounded-full">
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold text-slate-900 truncate">Administrateur</p>
+                        <p class="text-xs text-slate-500 truncate">admin@promatch.ma</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-64">
+            
+            <!-- Header -->
+            <header class="sticky top-0 z-30 bg-white border-b border-slate-200">
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        </button>
+                        <div>
+                            <h1 class="text-xl font-bold text-slate-900">Clients</h1>
+                            <p class="text-sm text-slate-500">Gestion de la base clients</p>
+                        </div>
+                    </div>
+                    <!-- Preline Trigger for Add Modal -->
+                    <button type="button" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500 text-white text-sm font-semibold rounded-lg hover:bg-brand-600 transition-colors" data-hs-overlay="#hs-add-client-modal">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        Ajouter un client
+                    </button>
+                </div>
+            </header>
+
+            <div class="p-6 max-w-7xl mx-auto space-y-6">
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Clients</p>
+                        <p class="text-3xl font-bold text-slate-900">142</p>
+                        <p class="text-xs text-brand-600 font-medium mt-1">↑ +8 ce mois</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Actifs (30j)</p>
+                        <p class="text-3xl font-bold text-slate-900">58</p>
+                        <p class="text-xs text-slate-400 font-medium mt-1">40.9% du total</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">CNI Validée</p>
+                        <p class="text-3xl font-bold text-slate-900">120</p>
+                        <p class="text-xs text-emerald-600 font-medium mt-1">84.5% validés</p>
+                    </div>
+                    <div class="bg-rose-50 rounded-xl border border-rose-100 p-5">
+                        <p class="text-xs font-semibold text-rose-500 uppercase tracking-wider mb-1">En attente CNI</p>
+                        <p class="text-3xl font-bold text-rose-700">22</p>
+                        <p class="text-xs text-rose-500 font-medium mt-1">À valider</p>
+                    </div>
+                </div>
+
+                <!-- Filters & Search -->
+                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+                    <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+                        <!-- Search -->
+                        <div class="relative flex-1 max-w-sm">
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            <input type="text" placeholder="Rechercher un client..." class="w-full pl-9 pr-4 py-2 text-sm border border-slate-200 rounded-lg focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none">
+                        </div>
+                        <!-- Preline Select -->
+                        <div class="flex gap-2">
+                            <select class="py-2 px-3 pr-9 block bg-white border-slate-200 rounded-lg text-sm focus:border-brand-500 focus:ring-brand-500 disabled:opacity-50 disabled:pointer-events-none">
+                                <option selected>Tous les clients</option>
+                                <option>CNI Validée</option>
+                                <option>En attente</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clients Table -->
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-left text-sm">
+                            <thead class="border-b border-slate-100 bg-slate-50">
+                                <tr>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Client</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Contact</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Réservations</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">Dépensé</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500">CNI</th>
+                                    <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-500 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="px-5 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold">YM</div>
+                                            <span class="font-semibold text-slate-800">Yassine Moussaoui</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <p class="text-slate-600 text-xs">yassine.m@gmail.com</p>
+                                        <p class="text-slate-400 text-xs mt-0.5">+212 6 12 34 56 78</p>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <span class="text-slate-700 font-semibold">12</span>
+                                        <span class="text-slate-400 text-xs"> séances</span>
+                                    </td>
+                                    <td class="px-5 py-4 font-semibold text-slate-700">3,600 MAD</td>
+                                    <td class="px-5 py-4">
+                                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-100">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                            Validée
+                                        </span>
+                                    </td>
+                                    <td class="px-5 py-4 text-right">
+                                        <button type="button" class="text-xs text-brand-600 hover:text-brand-700 font-semibold" data-hs-overlay="#hs-client-details-modal">Voir</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="px-5 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold">OB</div>
+                                            <span class="font-semibold text-slate-800">Omar Benali</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <p class="text-slate-600 text-xs">omar.b@outlook.com</p>
+                                        <p class="text-slate-400 text-xs mt-0.5">+212 6 98 76 54 32</p>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <span class="text-slate-700 font-semibold">8</span>
+                                        <span class="text-slate-400 text-xs"> séances</span>
+                                    </td>
+                                    <td class="px-5 py-4 font-semibold text-slate-700">2,400 MAD</td>
+                                    <td class="px-5 py-4">
+                                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold border border-amber-100">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                            En attente
+                                        </span>
+                                    </td>
+                                    <td class="px-5 py-4 text-right">
+                                        <button type="button" class="text-xs text-brand-600 hover:text-brand-700 font-semibold" data-hs-overlay="#hs-client-details-modal">Voir</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-slate-50/60 transition-colors">
+                                    <td class="px-5 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs font-bold">KT</div>
+                                            <span class="font-semibold text-slate-800">Karim Tahiri</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <p class="text-slate-600 text-xs">karim.t@gmail.com</p>
+                                        <p class="text-slate-400 text-xs mt-0.5">+212 6 11 22 33 44</p>
+                                    </td>
+                                    <td class="px-5 py-4">
+                                        <span class="text-slate-700 font-semibold">5</span>
+                                        <span class="text-slate-400 text-xs"> séances</span>
+                                    </td>
+                                    <td class="px-5 py-4 font-semibold text-slate-700">1,500 MAD</td>
+                                    <td class="px-5 py-4">
+                                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-100">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                            Validée
+                                        </span>
+                                    </td>
+                                    <td class="px-5 py-4 text-right">
+                                        <button type="button" class="text-xs text-brand-600 hover:text-brand-700 font-semibold" data-hs-overlay="#hs-client-details-modal">Voir</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="px-5 py-4 border-t border-slate-100 flex items-center justify-between">
+                        <p class="text-xs text-slate-500">Affichage de 1–10 sur 142 clients</p>
+                        <div class="flex gap-1">
+                            <button class="px-3 py-1.5 text-xs font-medium text-slate-500 border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-50" disabled>Préc.</button>
+                            <button class="px-3 py-1.5 text-xs font-bold text-white bg-brand-500 rounded-lg">1</button>
+                            <button class="px-3 py-1.5 text-xs font-medium text-slate-500 border border-slate-200 rounded-lg hover:bg-slate-50">2</button>
+                            <button class="px-3 py-1.5 text-xs font-medium text-slate-500 border border-slate-200 rounded-lg hover:bg-slate-50">Suiv.</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Preline Modal: Add Client -->
+    <div id="hs-add-client-modal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none">
+        <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="flex flex-col bg-white border shadow-sm rounded-2xl pointer-events-auto">
+                <div class="flex justify-between items-center py-3 px-4 border-b">
+                    <h3 class="font-bold text-slate-900">Ajouter un client</h3>
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-800 hover:bg-slate-100 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-add-client-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto space-y-4">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5">Prénom</label>
+                            <input type="text" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none" placeholder="Yassine">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5">Nom</label>
+                            <input type="text" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none" placeholder="Moussaoui">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Email</label>
+                        <input type="email" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none" placeholder="email@exemple.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5">Téléphone</label>
+                        <input type="tel" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none" placeholder="+212 6 00 00 00 00">
+                    </div>
+                </div>
+                <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-200 bg-white text-slate-800 shadow-sm hover:bg-slate-50 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-add-client-modal">Annuler</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-brand-500 text-white hover:bg-brand-600 disabled:opacity-50 disabled:pointer-events-none">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preline Modal: Client Details -->
+    <div id="hs-client-details-modal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none">
+        <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="flex flex-col bg-white border shadow-sm rounded-2xl pointer-events-auto">
+                <div class="flex justify-between items-center py-3 px-4 border-b">
+                    <h3 class="font-bold text-slate-900">Détails du client</h3>
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-slate-800 hover:bg-slate-100 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-client-details-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto space-y-4">
+                    <!-- Static Preview Content -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-lg font-bold bg-brand-100 text-brand-700">YM</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Yassine Moussaoui</p>
+                            <p class="text-sm text-slate-500">yassine.m@gmail.com</p>
+                            <p class="text-sm text-slate-400">+212 6 12 34 56 78</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 pt-2">
+                        <div class="bg-slate-50 rounded-xl p-3 text-center">
+                            <p class="text-lg font-bold text-slate-900">12</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Réservations</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-3 text-center">
+                            <p class="text-lg font-bold text-slate-900">3,600</p>
+                            <p class="text-xs text-slate-500 mt-0.5">MAD dépensé</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-3 text-center">
+                            <p class="text-lg font-bold text-emerald-600">✓</p>
+                            <p class="text-xs text-slate-500 mt-0.5">CNI</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-slate-200 bg-white text-slate-800 shadow-sm hover:bg-slate-50 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-client-details-modal">Fermer</button>
+                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-brand-500 text-white hover:bg-brand-600 disabled:opacity-50 disabled:pointer-events-none">Valider CNI</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preline JS -->
+    <script src="https://unpkg.com/preline/dist/preline.js"></script>
+
+</body>
+</html>
