@@ -1,43 +1,43 @@
 /* =============================================
    PROMATCH — Component Showcase Styles
-   Premium Dark UI · Clean Modern Design
+   White & Green Light UI · Professional Design
    ============================================= */
 
 /* ── Google Fonts are loaded in HTML ── */
 
 /* ── CSS Custom Properties ── */
 :root {
-  --brand:        #3b82f6;
-  --brand-light:  #60a5fa;
-  --brand-dark:   #2563eb;
-  --brand-glow:   rgba(59, 130, 246, 0.18);
+  --brand:        #4da565;
+  --brand-light:  #86efac;
+  --brand-dark:   #3d8a54;
+  --brand-glow:   rgba(77, 165, 101, 0.12);
 
   --success:      #22c55e;
   --warning:      #f59e0b;
   --danger:       #ef4444;
 
-  --bg-base:      #0a0e1a;
-  --bg-surface:   #0f1629;
-  --bg-card:      #131c35;
-  --bg-elevated:  #192040;
-  --bg-hover:     rgba(255,255,255,0.04);
-  --bg-code:      #0d1525;
+  --bg-base:      #f8fafc;
+  --bg-surface:   #ffffff;
+  --bg-card:      #f1f5f9;
+  --bg-elevated:  #e2e8f0;
+  --bg-hover:     rgba(77, 165, 101, 0.06);
+  --bg-code:      #1e293b;
 
-  --border:       rgba(255,255,255,0.07);
-  --border-focus: rgba(59,130,246,0.5);
+  --border:       #e2e8f0;
+  --border-focus: rgba(77, 165, 101, 0.5);
 
-  --text-primary:   #f0f4ff;
-  --text-secondary: #94a3b8;
-  --text-muted:     #4b6080;
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
 
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  --shadow-sm: 0 1px 4px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 24px rgba(0,0,0,0.5);
-  --shadow-lg: 0 12px 48px rgba(0,0,0,0.7);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
   --shadow-glow: 0 0 0 3px var(--brand-glow);
 
   --sidebar-w: 272px;
@@ -56,7 +56,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background: var(--bg-base);
   color: var(--text-primary);
   line-height: 1.6;
@@ -71,8 +71,8 @@ body::before {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(59,130,246,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(139,92,246,0.06) 0%, transparent 55%);
+    radial-gradient(ellipse 70% 40% at 0% 0%, rgba(77,165,101,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 30% at 100% 100%, rgba(77,165,101,0.04) 0%, transparent 55%);
   pointer-events: none;
   z-index: 0;
 }
@@ -96,23 +96,22 @@ body::before {
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  background: rgba(13, 18, 38, 0.92);
+  background: #ffffff;
   border-right: 1px solid var(--border);
   padding: 20px 14px 32px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.08) transparent;
+  scrollbar-color: #e2e8f0 transparent;
+  box-shadow: 1px 0 0 0 var(--border);
 }
 
 .showcase-sidebar::-webkit-scrollbar { width: 4px; }
 .showcase-sidebar::-webkit-scrollbar-track { background: transparent; }
 .showcase-sidebar::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.1);
+  background: #e2e8f0;
   border-radius: 2px;
 }
 .showcase-sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.18);
+  background: #cbd5e1;
 }
 
 /* Sidebar header */
@@ -132,11 +131,6 @@ body::before {
   color: var(--text-muted);
   padding: 0 10px;
   margin-bottom: 22px;
-}
-
-/* Divider between header and nav */
-.sidebar-header + .sidebar-subtitle {
-  position: relative;
 }
 
 /* Category group */
@@ -183,7 +177,7 @@ body::before {
 
 .component-item:hover {
   background: var(--bg-hover);
-  color: var(--text-primary);
+  color: var(--brand-dark);
   transform: translateX(2px);
 }
 
@@ -192,45 +186,55 @@ body::before {
   width: 22px;
   text-align: center;
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* Active state via :target */
-body:has(#button:target)    a[href="#button"],
-body:has(#input:target)     a[href="#input"],
-body:has(#badge:target)     a[href="#badge"],
-body:has(#icon:target)      a[href="#icon"],
-body:has(#avatar:target)    a[href="#avatar"],
-body:has(#logo:target)      a[href="#logo"],
-body:has(#stat-card:target) a[href="#stat-card"],
-body:has(#form-field:target) a[href="#form-field"],
-body:has(#nav-link:target)  a[href="#nav-link"],
-body:has(#navbar:target)    a[href="#navbar"],
-body:has(#footer:target)    a[href="#footer"],
-body:has(#hero:target)      a[href="#hero"],
-body:has(#card:target)      a[href="#card"],
-body:has(#modal:target)     a[href="#modal"],
-body:has(#table:target)     a[href="#table"] {
+body:has(#button:target)       a[href="#button"],
+body:has(#input:target)        a[href="#input"],
+body:has(#badge:target)        a[href="#badge"],
+body:has(#icon:target)         a[href="#icon"],
+body:has(#avatar:target)       a[href="#avatar"],
+body:has(#logo:target)         a[href="#logo"],
+body:has(#stat-card:target)    a[href="#stat-card"],
+body:has(#form-field:target)   a[href="#form-field"],
+body:has(#nav-link:target)     a[href="#nav-link"],
+body:has(#dropdown:target)     a[href="#dropdown"],
+body:has(#feature-card:target) a[href="#feature-card"],
+body:has(#navbar:target)       a[href="#navbar"],
+body:has(#footer:target)       a[href="#footer"],
+body:has(#hero:target)         a[href="#hero"],
+body:has(#court-card:target)   a[href="#court-card"],
+body:has(#booking-form:target) a[href="#booking-form"],
+body:has(#dashboard-stat:target) a[href="#dashboard-stat"],
+body:has(#modal:target)        a[href="#modal"],
+body:has(#table:target)        a[href="#table"],
+body:has(#accordion:target)    a[href="#accordion"] {
   background: var(--brand-glow);
-  color: var(--brand-light);
+  color: var(--brand-dark);
   font-weight: 600;
 }
 
-body:has(#button:target)    a[href="#button"]::before,
-body:has(#input:target)     a[href="#input"]::before,
-body:has(#badge:target)     a[href="#badge"]::before,
-body:has(#icon:target)      a[href="#icon"]::before,
-body:has(#avatar:target)    a[href="#avatar"]::before,
-body:has(#logo:target)      a[href="#logo"]::before,
-body:has(#stat-card:target) a[href="#stat-card"]::before,
-body:has(#form-field:target) a[href="#form-field"]::before,
-body:has(#nav-link:target)  a[href="#nav-link"]::before,
-body:has(#navbar:target)    a[href="#navbar"]::before,
-body:has(#footer:target)    a[href="#footer"]::before,
-body:has(#hero:target)      a[href="#hero"]::before,
-body:has(#card:target)      a[href="#card"]::before,
-body:has(#modal:target)     a[href="#modal"]::before,
-body:has(#table:target)     a[href="#table"]::before {
+body:has(#button:target)       a[href="#button"]::before,
+body:has(#input:target)        a[href="#input"]::before,
+body:has(#badge:target)        a[href="#badge"]::before,
+body:has(#icon:target)         a[href="#icon"]::before,
+body:has(#avatar:target)       a[href="#avatar"]::before,
+body:has(#logo:target)         a[href="#logo"]::before,
+body:has(#stat-card:target)    a[href="#stat-card"]::before,
+body:has(#form-field:target)   a[href="#form-field"]::before,
+body:has(#nav-link:target)     a[href="#nav-link"]::before,
+body:has(#dropdown:target)     a[href="#dropdown"]::before,
+body:has(#feature-card:target) a[href="#feature-card"]::before,
+body:has(#navbar:target)       a[href="#navbar"]::before,
+body:has(#footer:target)       a[href="#footer"]::before,
+body:has(#hero:target)         a[href="#hero"]::before,
+body:has(#court-card:target)   a[href="#court-card"]::before,
+body:has(#booking-form:target) a[href="#booking-form"]::before,
+body:has(#dashboard-stat:target) a[href="#dashboard-stat"]::before,
+body:has(#modal:target)        a[href="#modal"]::before,
+body:has(#table:target)        a[href="#table"]::before,
+body:has(#accordion:target)    a[href="#accordion"]::before {
   content: '';
   position: absolute;
   left: 0; top: 20%; bottom: 20%;
@@ -266,21 +270,26 @@ body:has(#table:target)     a[href="#table"]::before {
 }
 
 /* Hide welcome when any component is targeted */
-#button:target  ~ #welcome,
-#input:target   ~ #welcome,
-#badge:target   ~ #welcome,
-#icon:target    ~ #welcome,
-#avatar:target  ~ #welcome,
-#logo:target    ~ #welcome,
-#stat-card:target  ~ #welcome,
-#form-field:target ~ #welcome,
-#nav-link:target   ~ #welcome,
-#navbar:target  ~ #welcome,
-#footer:target  ~ #welcome,
-#hero:target    ~ #welcome,
-#card:target    ~ #welcome,
-#modal:target   ~ #welcome,
-#table:target   ~ #welcome {
+#button:target        ~ #welcome,
+#input:target         ~ #welcome,
+#badge:target         ~ #welcome,
+#icon:target          ~ #welcome,
+#avatar:target        ~ #welcome,
+#logo:target          ~ #welcome,
+#stat-card:target     ~ #welcome,
+#form-field:target    ~ #welcome,
+#nav-link:target      ~ #welcome,
+#dropdown:target      ~ #welcome,
+#feature-card:target  ~ #welcome,
+#navbar:target        ~ #welcome,
+#footer:target        ~ #welcome,
+#hero:target          ~ #welcome,
+#court-card:target    ~ #welcome,
+#booking-form:target  ~ #welcome,
+#dashboard-stat:target ~ #welcome,
+#modal:target         ~ #welcome,
+#table:target         ~ #welcome,
+#accordion:target     ~ #welcome {
   display: none;
 }
 
@@ -303,7 +312,8 @@ body:has(#table:target)     a[href="#table"]::before {
   font-size: 64px;
   margin-bottom: 24px;
   display: block;
-  filter: drop-shadow(0 0 20px rgba(59,130,246,0.4));
+  filter: drop-shadow(0 0 20px rgba(77,165,101,0.3));
+  color: var(--brand);
 }
 
 .welcome-screen h1 {
@@ -311,7 +321,7 @@ body:has(#table:target)     a[href="#table"]::before {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  background: linear-gradient(135deg, #f0f4ff 0%, #93c5fd 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #4da565 60%, #3d8a54 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -329,24 +339,24 @@ body:has(#table:target)     a[href="#table"]::before {
   align-items: center;
   gap: 6px;
   background: var(--brand-glow);
-  color: var(--brand-light);
+  color: var(--brand-dark);
   padding: 7px 16px;
   border-radius: 999px;
   font-size: 12.5px;
   font-weight: 600;
-  border: 1px solid rgba(59,130,246,0.2);
+  border: 1px solid rgba(77,165,101,0.25);
   letter-spacing: 0.02em;
 }
 
 .badge-showcase.badge-success {
-  background: rgba(34,197,94,0.12);
-  color: #4ade80;
+  background: rgba(34,197,94,0.10);
+  color: #16a34a;
   border-color: rgba(34,197,94,0.2);
 }
 
 .badge-showcase.badge-warning {
-  background: rgba(245,158,11,0.12);
-  color: #fbbf24;
+  background: rgba(245,158,11,0.10);
+  color: #b45309;
   border-color: rgba(245,158,11,0.2);
 }
 
@@ -407,11 +417,12 @@ body:has(#table:target)     a[href="#table"]::before {
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: 32px;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .preview-container:hover {
-  border-color: rgba(255,255,255,0.12);
+  border-color: rgba(77,165,101,0.3);
+  box-shadow: 0 0 0 3px rgba(77,165,101,0.06);
 }
 
 /* ─────────────────────────────────────────────
@@ -419,7 +430,7 @@ body:has(#table:target)     a[href="#table"]::before {
 ───────────────────────────────────────────── */
 .code-block {
   background: var(--bg-code);
-  border: 1px solid var(--border);
+  border: 1px solid #334155;
   border-radius: var(--radius-lg);
   padding: 24px;
   overflow-x: auto;
@@ -435,11 +446,11 @@ body:has(#table:target)     a[href="#table"]::before {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  background: var(--bg-elevated);
+  color: #64748b;
+  background: #0f172a;
   padding: 3px 8px;
   border-radius: 6px;
-  border: 1px solid var(--border);
+  border: 1px solid #334155;
 }
 
 .code-block pre {
@@ -447,7 +458,7 @@ body:has(#table:target)     a[href="#table"]::before {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: 13px;
   line-height: 1.7;
-  color: #93c5fd;
+  color: #86efac;
 }
 
 /* ─────────────────────────────────────────────
@@ -488,21 +499,21 @@ body:has(#table:target)     a[href="#table"]::before {
 .props-table td {
   font-size: 13.5px;
   color: var(--text-secondary);
-  background: var(--bg-card);
+  background: #ffffff;
 }
 
 .props-table tr:hover td {
-  background: var(--bg-elevated);
+  background: var(--bg-card);
 }
 
 .props-table code {
   background: var(--brand-glow);
-  color: var(--brand-light);
+  color: var(--brand-dark);
   padding: 2px 7px;
   border-radius: 5px;
   font-size: 12px;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  border: 1px solid rgba(59,130,246,0.2);
+  border: 1px solid rgba(77,165,101,0.25);
 }
 
 /* ─────────────────────────────────────────────
@@ -515,7 +526,7 @@ body:has(#table:target)     a[href="#table"]::before {
 }
 
 .variant-item {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px 20px;
@@ -530,7 +541,7 @@ body:has(#table:target)     a[href="#table"]::before {
 }
 
 .variant-item:hover {
-  border-color: rgba(255,255,255,0.14);
+  border-color: rgba(77,165,101,0.35);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }

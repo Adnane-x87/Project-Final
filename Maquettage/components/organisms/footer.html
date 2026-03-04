@@ -1,12 +1,36 @@
 <!-- Footer Organism -->
-<footer class="mt-16 border-t border-slate-800/70 py-10">
-  <div class="[[containerClass]]">
-    <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-      [[logo]]
-      <p class="text-sm text-slate-400">[[copyright]]</p>
-      <div class="flex flex-wrap gap-2">
-        [[links]]
-      </div>
+<footer class="bg-neutral-900 border-t border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            
+            <!-- Brand Column -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    [[logo]]
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                    [[description]]
+                </p>
+                <div class="flex gap-3">
+                    [[socialLinks]]
+                </div>
+            </div>
+
+            <!-- Navigation Columns -->
+            [[links]]
+
+        </div>
     </div>
-  </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">[[copyright]]</p>
+                <div class="flex items-center gap-2 text-sm text-slate-500">
+                    [[credits]]
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

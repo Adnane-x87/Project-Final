@@ -1,10 +1,47 @@
 <!-- Sidebar Organism -->
-<aside class="hidden w-[280px] flex-col border-r border-slate-800/70 bg-slate-950/60 p-4 lg:flex">
-  [[logo]]
+<aside class="hidden lg:flex w-64 flex-col fixed inset-y-0 bg-white border-r border-slate-200">
+    
+    <!-- Logo -->
+    <div class="h-20 relative flex items-center justify-center border-b border-slate-100">
+        <a href="./index.html" class="block">
+            <img src="./images/logo.png" alt="ProMatch Logo" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-auto max-w-none">
+        </a>
+    </div>
 
-  [[sections]]
+    <!-- Navigation -->
+    <nav class="flex-1 px-4 py-6 space-y-1">
+        <!-- Active: Tableau de bord -->
+        <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg bg-brand-50 text-brand-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            Tableau de bord
+        </a>
+        <a href="./reservations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Réservations
+        </a>
+        <a href="./validations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Validations CNI
+            <span class="ml-auto w-5 h-5 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">2</span>
+        </a>
+        <a href="./index.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Accueil
+        </a>
+        <a href="./booking.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Nouvelle réservation
+        </a>
+    </nav>
 
-  <div class="mt-auto pt-5">
-    [[footer]]
-  </div>
+    <!-- User -->
+    <div class="p-4 border-t border-slate-100">
+        <div class="flex items-center gap-3">
+            <img src="[[userAvatar]]" alt="User" class="w-9 h-9 rounded-full">
+            <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-slate-900 truncate">[[userName]]</p>
+                <p class="text-xs text-slate-500 truncate">[[userEmail]]</p>
+            </div>
+        </div>
+    </div>
 </aside>

@@ -17,13 +17,23 @@
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: "#3b82f6", 600: "#2563eb", light: "#60a5fa" },
+            brand: {
+              50:  '#f0f9f1',
+              100: '#dcf1df',
+              200: '#bbe2c3',
+              300: '#8dca9e',
+              400: '#5eac72',
+              500: '#4da565',
+              600: '#3d8a54',
+              700: '#327145',
+            },
+            primary: { DEFAULT: "#4da565", 600: "#3d8a54", light: "#86efac" },
             success: "#22c55e",
             warning: "#f59e0b",
             danger:  "#ef4444",
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
             mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
           },
         },
@@ -31,7 +41,7 @@
     };
   </script>
 
-  <link rel="stylesheet" href="./preline/assets/theme.css" />
+
   <link rel="stylesheet" href="./showcase-styles.css" />
 </head>
 
@@ -40,8 +50,7 @@
     <!-- Sidebar -->
     <aside class="showcase-sidebar">
       <div class="sidebar-header">
-        <span class="text-white"><svg class="size-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-        <span class="text-lg font-extrabold text-white">Pro<span class="text-primary">Match</span></span>
+        <img src="./images/logo.png" alt="ProMatch" class="h-12 w-auto">
       </div>
       <p class="sidebar-subtitle">Component Showcase</p>
 
@@ -80,6 +89,12 @@
         <a href="#nav-link" class="component-item">
           <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></span>Nav Link
         </a>
+        <a href="#dropdown" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>Dropdown
+        </a>
+        <a href="#feature-card" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"/></svg></span>Feature Card
+        </a>
       </div>
 
       <!-- Organisms -->
@@ -94,14 +109,23 @@
         <a href="#hero" class="component-item">
           <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span>Hero
         </a>
-        <a href="#card" class="component-item">
-          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg></span>Card
+        <a href="#court-card" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg></span>Court Card
+        </a>
+        <a href="#booking-form" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span>Booking Form
+        </a>
+        <a href="#dashboard-stat" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></span>Dashboard Stats
         </a>
         <a href="#modal" class="component-item">
           <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></span>Modal
         </a>
         <a href="#table" class="component-item">
           <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>Table
+        </a>
+        <a href="#accordion" class="component-item">
+          <span class="component-icon"><svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>Accordion
         </a>
       </div>
     </aside>
@@ -111,18 +135,6 @@
 
       <!-- Welcome Screen (default) -->
       <div id="welcome" class="component-preview active">
-        <div class="welcome-screen">
-          <span class="welcome-icon"><svg class="size-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg></span>
-          <h1>Component Showcase</h1>
-          <p class="mt-3">
-            Select a component from the sidebar to view its documentation, variants, and live previews.
-          </p>
-          <div class="mt-8 flex gap-3 justify-center flex-wrap">
-            <span class="badge-showcase"><svg class="size-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>30+ Components</span>
-            <span class="badge-showcase badge-success"><svg class="size-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"/></svg>Atomic Design</span>
-            <span class="badge-showcase badge-warning"><svg class="size-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>Fully Reusable</span>
-          </div>
-        </div>
       </div>
 
       <!-- Button Component -->
@@ -134,13 +146,13 @@
           <h3 class="section-title">Variants</h3>
           <div class="variant-grid">
             <div class="variant-item">
-              <button class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-extrabold text-white hover:bg-primary-600">
+              <button class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-extrabold text-white shadow-md shadow-primary/20 hover:bg-primary-600">
                 Primary
               </button>
               <div class="variant-label">Primary</div>
             </div>
             <div class="variant-item">
-              <button class="inline-flex items-center gap-2 rounded-2xl border border-slate-800 bg-slate-950 px-4 py-2.5 text-sm font-bold text-slate-200 hover:bg-slate-900">
+              <button class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300">
                 Secondary
               </button>
               <div class="variant-label">Secondary</div>
@@ -255,16 +267,16 @@
           <h3 class="section-title">Variants</h3>
           <div class="space-y-4">
             <div>
-              <label class="block mb-2 text-xs font-bold text-slate-400">Text Input</label>
-              <input type="text" class="w-full rounded-2xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/15" placeholder="Enter text..." />
+              <label class="block mb-2 text-xs font-bold text-slate-500">Text Input</label>
+              <input type="text" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10" placeholder="Enter text..." />
             </div>
             <div>
-              <label class="block mb-2 text-xs font-bold text-slate-400">Email Input</label>
-              <input type="email" class="w-full rounded-2xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/15" placeholder="email@example.com" />
+              <label class="block mb-2 text-xs font-bold text-slate-500">Email Input</label>
+              <input type="email" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10" placeholder="email@example.com" />
             </div>
             <div>
-              <label class="block mb-2 text-xs font-bold text-slate-400">Date Input</label>
-              <input type="date" class="w-full rounded-2xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/15" />
+              <label class="block mb-2 text-xs font-bold text-slate-500">Date Input</label>
+              <input type="date" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10" />
             </div>
           </div>
         </div>
@@ -347,11 +359,8 @@
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
           <div class="preview-container">
-            <a href="#" class="flex items-center gap-2 font-extrabold tracking-tight">
-              <span class="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/30">
-                <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </span>
-              <span class="text-lg">Pro<span class="text-primary">Match</span></span>
+            <a href="#" class="flex items-center gap-2">
+              <img src="./images/logo.png" alt="ProMatch Logo" class="h-24 w-auto">
             </a>
           </div>
         </div>
@@ -359,9 +368,8 @@
         <div class="preview-section">
           <h3 class="section-title">Usage</h3>
           <div class="code-block">
-            <pre>&lt;a href="#" class="logo"&gt;
-  &lt;span class="logo-icon"&gt;⚽&lt;/span&gt;
-  &lt;span&gt;Pro&lt;span class="text-primary"&gt;Match&lt;/span&gt;&lt;/span&gt;
+            <pre>&lt;a href="#" class="flex items-center gap-2"&gt;
+  &lt;img src="./images/logo.png" alt="ProMatch Logo" class="h-24 w-auto"&gt;
 &lt;/a&gt;</pre>
           </div>
         </div>
@@ -409,11 +417,11 @@
           <h3 class="section-title">Preview</h3>
           <div class="preview-container max-w-md">
             <label class="block">
-              <span class="mb-1 block text-xs font-bold text-slate-400 flex items-center gap-1.5">
+              <span class="mb-1 block text-xs font-bold text-slate-500 flex items-center gap-1.5">
                 <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 Email Address
               </span>
-              <input type="email" class="w-full rounded-2xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/15" placeholder="email@example.com" />
+              <input type="email" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10" placeholder="email@example.com" />
             </label>
           </div>
         </div>
@@ -422,21 +430,59 @@
       <!-- Nav Link Component -->
       <div id="nav-link" class="component-preview">
         <h1 class="component-title">Nav Link</h1>
-        <p class="component-description">Navigation link with optional badge</p>
+        <p class="component-description">Navigation link with optional badge — used in the Navbar</p>
         
         <div class="preview-section">
           <h3 class="section-title">Variants</h3>
           <div class="space-y-3">
-            <a href="#" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-900 hover:text-white">
-              Simple Link
-            </a>
-            <a href="#" class="flex items-center justify-between rounded-lg bg-primary/10 px-3 py-2 text-sm font-extrabold text-primary ring-1 ring-primary/20">
-              Active Link
-            </a>
-            <a href="#" class="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-900">
-              Link with Badge
-              <span class="rounded-xl bg-danger/20 px-2 py-1 text-xs font-extrabold text-danger ring-1 ring-danger/30">3</span>
-            </a>
+            <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors block">Terrains</a>
+            <a href="#" class="text-sm font-semibold text-brand-600 block">Comment ça marche (Active)</a>
+            <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors block">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown Component -->
+      <div id="dropdown" class="component-preview">
+        <h1 class="component-title">Dropdown</h1>
+        <p class="component-description">Dropdown select — used in the Booking Form for terrain selection</p>
+        
+        <div class="preview-section">
+          <h3 class="section-title">Preview</h3>
+          <div class="preview-container bg-white rounded-xl p-4">
+            <label class="block text-sm font-medium text-slate-700 mb-2">Terrain</label>
+            <select class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none bg-white">
+              <option>Terrain 1 — 5vs5 (300 DH/h)</option>
+              <option>Terrain 2 — 7vs7 (450 DH/h)</option>
+              <option>Terrain 3 — 5vs5 (300 DH/h)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card Component -->
+      <div id="feature-card" class="component-preview">
+        <h1 class="component-title">Feature Card</h1>
+        <p class="component-description">Step callout card — used in the "How it Works" section of index.html</p>
+        
+        <div class="preview-section">
+          <h3 class="section-title">Variants</h3>
+          <div class="grid gap-4 md:grid-cols-3 bg-slate-50 rounded-xl p-6">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl font-bold mb-5">1</div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Choisissez votre terrain</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Consultez les disponibilités en temps réel.</p>
+            </div>
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-5 shadow-lg shadow-brand-200">2</div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Vérification rapide</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Upload de votre CNI pour validation.</p>
+            </div>
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-5">3</div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Confirmation instantanée</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Recevez votre confirmation par email.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -444,26 +490,26 @@
       <!-- Navbar Component -->
       <div id="navbar" class="component-preview">
         <h1 class="component-title">Navbar</h1>
-        <p class="component-description">Main navigation bar</p>
+        <p class="component-description">Main navigation bar — used in index.html and booking.html</p>
         
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
-          <div class="preview-container">
-            <header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/70 backdrop-blur rounded-2xl">
-              <nav class="flex items-center justify-between gap-3 px-4 py-3">
-                <a href="#" class="flex items-center gap-2 font-extrabold tracking-tight">
-                  <span class="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 text-lg ring-1 ring-primary/30">⚽</span>
-                  <span class="text-lg">Pro<span class="text-primary">Match</span></span>
-                </a>
-                
+          <div class="preview-container p-0 overflow-hidden rounded-2xl">
+            <header class="border-b border-slate-100 bg-white/95 backdrop-blur-xl">
+              <div class="flex h-16 items-center justify-between px-6">
                 <div class="flex items-center gap-2">
-                  <a href="#" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-900">Home</a>
-                  <a href="#" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-slate-900">About</a>
-                  <button class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-extrabold text-white">
-                    Book Now
-                  </button>
+                  <img src="./images/logo.png" alt="ProMatch Logo" class="h-10 w-auto">
                 </div>
-              </nav>
+                <nav class="hidden md:flex gap-6">
+                  <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600">Terrains</a>
+                  <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600">Comment ça marche</a>
+                  <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                  <a href="#" class="text-sm font-semibold text-slate-600 hover:text-brand-600">Se connecter</a>
+                  <a href="#" class="rounded-xl bg-slate-900 px-5 py-2 text-sm font-bold text-white hover:bg-brand-600 transition-colors">Réserver</a>
+                </div>
+              </div>
             </header>
           </div>
         </div>
@@ -472,22 +518,40 @@
       <!-- Footer Component -->
       <div id="footer" class="component-preview">
         <h1 class="component-title">Footer</h1>
-        <p class="component-description">Site footer</p>
+        <p class="component-description">Site footer — used in index.html</p>
         
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
-          <div class="preview-container">
-            <footer class="border-t border-slate-800/70 py-6 rounded-2xl">
-              <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-                <div class="flex items-center gap-2 font-extrabold">
-                  <span class="grid h-9 w-9 place-items-center rounded-xl bg-primary/15 ring-1 ring-primary/30">⚽</span>
-                  <span>Pro<span class="text-primary">Match</span></span>
+          <div class="preview-container p-0 overflow-hidden rounded-2xl">
+            <footer class="bg-neutral-900 px-8 py-10">
+              <div class="flex flex-col md:flex-row items-start justify-between gap-8">
+                <div>
+                  <div class="flex items-center gap-2 mb-4">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white font-bold text-xl">P</span>
+                    <span class="text-xl font-extrabold tracking-tight text-white">Pro<span class="text-emerald-400">Match</span></span>
+                  </div>
+                  <p class="text-sm text-slate-400 max-w-xs leading-relaxed">La référence pour la réservation de terrains de football au Maroc.</p>
                 </div>
-                <p class="text-sm text-slate-400">© 2026 ProMatch</p>
-                <div class="flex flex-wrap gap-2">
-                  <a href="#" class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-900">Home</a>
-                  <a href="#" class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-900">Admin</a>
+                <div class="grid grid-cols-2 gap-8">
+                  <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                      <li><a href="#" class="text-sm text-slate-400 hover:text-emerald-400 transition-colors">Accueil</a></li>
+                      <li><a href="#" class="text-sm text-slate-400 hover:text-emerald-400 transition-colors">Nos Terrains</a></li>
+                      <li><a href="#" class="text-sm text-slate-400 hover:text-emerald-400 transition-colors">Réserver</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Informations</h4>
+                    <ul class="space-y-2">
+                      <li><a href="#" class="text-sm text-slate-400 hover:text-emerald-400 transition-colors">Mentions légales</a></li>
+                      <li><a href="#" class="text-sm text-slate-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+              <div class="mt-8 border-t border-slate-800 pt-6">
+                <p class="text-sm text-slate-500">© 2026 ProMatch. Tous droits réservés.</p>
               </div>
             </footer>
           </div>
@@ -497,67 +561,175 @@
       <!-- Hero Component -->
       <div id="hero" class="component-preview">
         <h1 class="component-title">Hero</h1>
-        <p class="component-description">Hero section with title and description</p>
+        <p class="component-description">Hero section with dark overlay on background image — used in index.html</p>
         
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
-          <div class="preview-container">
-            <div class="text-center py-12">
-              <div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary mb-5">
-                <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                New Feature
+          <div class="preview-container p-0 overflow-hidden rounded-2xl bg-slate-700">
+            <div class="relative py-20 px-8 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent">
+              <div class="max-w-lg py-8">
+                <h1 class="text-4xl font-extrabold text-white tracking-tight leading-[1.1] mb-4">
+                  Votre terrain<br><span class="text-brand-400">vous attend.</span>
+                </h1>
+                <p class="text-base text-slate-200 leading-relaxed max-w-lg mb-6">4 terrains avec gazon synthétique, éclairage LED et vestiaires.</p>
+                <div class="flex flex-wrap gap-3">
+                  <a href="#" class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-500 transition-colors shadow-lg">
+                    Réserver maintenant
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  </a>
+                  <a href="#" class="inline-flex items-center gap-2 rounded-lg bg-white/10 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-white border border-white/20 hover:bg-white/20 transition-colors">Voir les terrains</a>
+                </div>
               </div>
-              <h1 class="text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-                Book Your <span class="text-primary">Sports Court</span>
-              </h1>
-              <p class="mt-4 max-w-xl mx-auto text-base text-slate-300">
-                Real-time availability, instant confirmation, secure identity verification. No need to call.
-              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Card Component -->
-      <div id="card" class="component-preview">
-        <h1 class="component-title">Card</h1>
-        <p class="component-description">Content card container</p>
+      <!-- Court Card Component -->
+      <div id="court-card" class="component-preview">
+        <h1 class="component-title">Court Card</h1>
+        <p class="component-description">Sports court listing card — used in the Terrains section of index.html</p>
         
         <div class="preview-section">
           <h3 class="section-title">Variants</h3>
-          <div class="grid gap-4 md:grid-cols-2">
-            <article class="rounded-3xl border border-slate-800 bg-slate-950/60 p-5">
-              <div class="flex items-start justify-between">
-                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
-                  <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </div>
-                <span class="rounded-full bg-success/15 px-3 py-1 text-xs font-extrabold text-success ring-1 ring-success/30">● Available</span>
+          <div class="grid gap-4 md:grid-cols-2 bg-white p-4 rounded-xl">
+            <!-- Available -->
+            <article class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:-translate-y-1 transition-transform">
+              <div class="h-36 bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center relative">
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 text-xs font-bold border border-emerald-100">Disponible</span>
+                <svg class="w-12 h-12 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
               </div>
-              <h3 class="mt-4 text-base font-extrabold">Football Court #1</h3>
-              <p class="mt-1 text-sm text-slate-300">Synthetic grass · LED · Locker rooms</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div class="text-sm font-extrabold text-primary">80 MAD <span class="text-xs font-semibold text-slate-400">/ hour</span></div>
-                <button class="inline-flex items-center gap-2 rounded-2xl bg-primary px-3.5 py-2 text-xs font-extrabold text-white">Book</button>
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-base font-bold text-slate-900">Terrain N°1</h3>
+                  <span class="text-xs font-bold text-slate-400 uppercase">5vs5</span>
+                </div>
+                <ul class="space-y-1 mb-3 text-sm text-slate-600">
+                  <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Gazon synthétique Pro</li>
+                  <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Éclairage LED</li>
+                </ul>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                  <span class="text-lg font-bold text-slate-900">300 Dh<span class="text-xs text-slate-400">/h</span></span>
+                  <a href="#" class="px-4 py-2 bg-slate-900 text-white text-sm font-bold rounded-lg hover:bg-brand-600 transition-colors">Réserver</a>
+                </div>
               </div>
             </article>
+            <!-- Unavailable -->
+            <article class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden opacity-60">
+              <div class="h-36 bg-slate-100 flex items-center justify-center relative">
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-200 text-slate-500 text-xs font-bold">Complet</span>
+                <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-base font-bold text-slate-500">Terrain N°4</h3>
+                  <span class="text-xs font-bold text-slate-400 uppercase">5vs5</span>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-200 mt-3">
+                  <span class="text-lg font-bold text-slate-400">300 Dh<span class="text-xs">/h</span></span>
+                  <button disabled class="px-4 py-2 bg-slate-200 text-slate-400 text-sm font-bold rounded-lg cursor-not-allowed">Complet</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
 
-            <article class="rounded-3xl border border-slate-800 bg-slate-950/60 p-5">
-              <div class="flex items-start justify-between">
-                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-slate-900 text-slate-400 ring-1 ring-slate-800">
-                  <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <!-- Booking Form Component -->
+      <div id="booking-form" class="component-preview">
+        <h1 class="component-title">Booking Form</h1>
+        <p class="component-description">Full reservation form — from booking.html</p>
+        
+        <div class="preview-section">
+          <h3 class="section-title">Preview</h3>
+          <div class="preview-container bg-slate-50 rounded-xl p-4 max-w-lg mx-auto">
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm">
+              <div class="p-5 border-b border-slate-100">
+                <label class="block text-sm font-medium text-slate-700 mb-2">Terrain</label>
+                <select class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-500 outline-none">
+                  <option>Terrain 1 — 5vs5 (300 DH/h)</option>
+                  <option>Terrain 2 — 7vs7 (450 DH/h)</option>
+                </select>
+              </div>
+              <div class="p-5 border-b border-slate-100">
+                <label class="block text-sm font-medium text-slate-700 mb-2">Date</label>
+                <input type="date" class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-500 outline-none" />
+              </div>
+              <div class="p-5 border-b border-slate-100">
+                <label class="block text-sm font-medium text-slate-700 mb-3">Heure disponible</label>
+                <div class="grid grid-cols-4 gap-2">
+                  <button type="button" class="py-2 px-3 rounded-lg border-2 border-brand-500 text-sm font-medium text-brand-600 text-center bg-brand-50">18:00</button>
+                  <button type="button" class="py-2 px-3 rounded-lg border border-slate-200 text-sm font-medium text-slate-600 text-center hover:border-brand-500">19:00</button>
+                  <button type="button" class="py-2 px-3 rounded-lg border border-slate-200 text-sm font-medium text-slate-600 text-center hover:border-brand-500">20:00</button>
+                  <button type="button" class="py-2 px-3 rounded-lg border border-slate-200 text-sm font-medium text-slate-400 bg-slate-50 cursor-not-allowed" disabled>21:00</button>
                 </div>
-                <span class="rounded-full bg-danger/15 px-3 py-1 text-xs font-extrabold text-danger ring-1 ring-danger/30">
-                  <svg class="size-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                  Full
-                </span>
               </div>
-              <h3 class="mt-4 text-base font-extrabold">Tennis Court #2</h3>
-              <p class="mt-1 text-sm text-slate-300">Hard surface · Net included · LED</p>
-              <div class="mt-4 flex items-center justify-between">
-                <div class="text-sm font-extrabold text-primary">60 MAD <span class="text-xs font-semibold text-slate-400">/ hour</span></div>
-                <button class="inline-flex items-center gap-2 rounded-2xl border border-slate-800 bg-slate-950 px-3.5 py-2 text-xs font-extrabold text-slate-200">View</button>
+              <div class="p-5 bg-slate-50 rounded-b-xl">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-slate-600">Total (1 heure)</span>
+                  <span class="text-2xl font-bold text-slate-900">300 DH</span>
+                </div>
+                <button class="w-full py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 transition-colors">Envoyer la demande</button>
               </div>
-            </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Stats Component -->
+      <div id="dashboard-stat" class="component-preview">
+        <h1 class="component-title">Dashboard Stats</h1>
+        <p class="component-description">KPI stat cards and sidebar nav — from dashboard.html</p>
+        
+        <div class="preview-section">
+          <h3 class="section-title">Stat Cards</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-50 p-4 rounded-xl">
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-xs font-medium text-slate-500">Recettes aujourd'hui</p>
+                <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-xs font-semibold">+12%</span>
+              </div>
+              <p class="text-xl font-bold text-slate-900">1,240 <span class="text-xs font-medium text-slate-400">MAD</span></p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <p class="text-xs font-medium text-slate-500 mb-2">Réservations</p>
+              <p class="text-xl font-bold text-slate-900">8 <span class="text-xs font-medium text-slate-400">/ 12</span></p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <p class="text-xs font-medium text-slate-500 mb-2">Joueurs actifs</p>
+              <p class="text-xl font-bold text-slate-900">42</p>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-xl border border-rose-100 cursor-pointer">
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-xs font-medium text-rose-600">Validations CNI</p>
+                <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              </div>
+              <p class="text-xl font-bold text-rose-700">2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <h3 class="section-title">Sidebar Navigation</h3>
+          <div class="bg-white border border-slate-200 rounded-xl overflow-hidden max-w-xs">
+            <div class="px-4 py-3 border-b border-slate-100">
+              <img src="./images/logo.png" alt="ProMatch" class="h-8 w-auto">
+            </div>
+            <nav class="px-3 py-4 space-y-1">
+              <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg bg-brand-50 text-brand-700">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                Tableau de bord
+              </a>
+              <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Réservations
+              </a>
+              <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Validations CNI
+                <span class="ml-auto w-5 h-5 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">2</span>
+              </a>
+            </nav>
           </div>
         </div>
       </div>
@@ -565,13 +737,13 @@
       <!-- Modal Component -->
       <div id="modal" class="component-preview">
         <h1 class="component-title">Modal</h1>
-        <p class="component-description">Dialog overlay (requires Preline)</p>
+        <p class="component-description">Dialog overlay — used for booking confirmation in booking.html</p>
         
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
           <div class="preview-container">
             <button type="button" class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-extrabold text-white" data-hs-overlay="#demo-modal">
-              Open Modal
+              Open Booking Confirmation
             </button>
           </div>
         </div>
@@ -593,50 +765,90 @@
       <!-- Table Component -->
       <div id="table" class="component-preview">
         <h1 class="component-title">Table</h1>
-        <p class="component-description">Data table</p>
+        <p class="component-description">Admin data table — used in dashboard.html to list reservations</p>
         
         <div class="preview-section">
           <h3 class="section-title">Preview</h3>
-          <div class="preview-container">
-            <div class="overflow-x-auto rounded-3xl border border-slate-800">
+          <div class="preview-container bg-white rounded-xl p-0 overflow-hidden">
+            <div class="overflow-x-auto">
               <table class="min-w-full text-left text-sm">
-                <thead class="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                <thead class="text-xs font-semibold uppercase tracking-wider text-slate-500 border-b border-slate-200 bg-slate-50">
                   <tr>
-                    <th class="px-5 py-4">Name</th>
-                    <th class="px-5 py-4">Court</th>
-                    <th class="px-5 py-4">Date</th>
-                    <th class="px-5 py-4">Status</th>
+                    <th class="px-5 py-4">Joueur</th>
+                    <th class="px-5 py-4">Terrain</th>
+                    <th class="px-5 py-4">Date &amp; Heure</th>
+                    <th class="px-5 py-4">Statut</th>
+                    <th class="px-5 py-4">Actions</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-800 bg-slate-950">
-                  <tr class="hover:bg-slate-900/40">
-                    <td class="px-5 py-4 font-extrabold">Yassine M.</td>
-                    <td class="px-5 py-4 font-extrabold flex items-center gap-2">
-                       Court #1 
-                       <svg class="size-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </td>
-                    <td class="px-5 py-4 text-slate-300 font-semibold">Sat. 7 Mar · 18:00</td>
+                <tbody class="divide-y divide-slate-100 bg-white">
+                  <tr class="hover:bg-slate-50">
+                    <td class="px-5 py-4 font-semibold text-slate-900">Yassine M.</td>
+                    <td class="px-5 py-4 text-slate-600">Terrain 1 · 5vs5</td>
+                    <td class="px-5 py-4 text-slate-500">Mer. 5 Mar · 18:00</td>
                     <td class="px-5 py-4">
-                      <span class="inline-flex items-center gap-2 rounded-full bg-success/15 px-3 py-1 text-xs font-extrabold text-success ring-1 ring-success/30">
-                        <span class="inline-block h-2 w-2 rounded-full bg-success"></span>Approved
+                      <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 border border-emerald-100">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Approuvé
                       </span>
+                    </td>
+                    <td class="px-5 py-4">
+                      <button class="text-xs text-slate-500 hover:text-slate-800 font-medium">Voir</button>
                     </td>
                   </tr>
-                  <tr class="hover:bg-slate-900/40">
-                    <td class="px-5 py-4 font-extrabold">Omar B.</td>
-                    <td class="px-5 py-4 font-extrabold flex items-center gap-2">
-                       Court #2
-                       <svg class="size-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </td>
-                    <td class="px-5 py-4 text-slate-300 font-semibold">Mon. 2 Mar · 17:00</td>
+                  <tr class="hover:bg-slate-50">
+                    <td class="px-5 py-4 font-semibold text-slate-900">Omar B.</td>
+                    <td class="px-5 py-4 text-slate-600">Terrain 2 · 7vs7</td>
+                    <td class="px-5 py-4 text-slate-500">Sam. 8 Mar · 20:00</td>
                     <td class="px-5 py-4">
-                      <span class="inline-flex items-center gap-2 rounded-full bg-warning/15 px-3 py-1 text-xs font-extrabold text-warning ring-1 ring-warning/30">
-                        <span class="inline-block h-2 w-2 rounded-full bg-warning"></span>Pending
+                      <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700 border border-amber-100">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>En attente
                       </span>
+                    </td>
+                    <td class="px-5 py-4">
+                      <div class="flex gap-2">
+                        <button class="text-xs text-emerald-600 hover:text-emerald-800 font-semibold">Approuver</button>
+                        <button class="text-xs text-rose-500 hover:text-rose-700 font-semibold">Refuser</button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Component -->
+      <div id="accordion" class="component-preview">
+        <h1 class="component-title">Accordion</h1>
+        <p class="component-description">Collapsible FAQ sections — used in index.html</p>
+        
+        <div class="preview-section">
+          <h3 class="section-title">Preview</h3>
+          <div class="preview-container bg-white rounded-xl p-4 max-w-2xl mx-auto space-y-2">
+            <!-- Open item -->
+            <div class="rounded-xl border border-slate-200 overflow-hidden">
+              <button class="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                Comment puis-je réserver un terrain ?
+                <svg class="size-5 text-brand-600 rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="px-5 pb-4 text-sm text-slate-500 leading-relaxed border-t border-slate-100">
+                Vous pouvez réserver directement via notre plateforme en sélectionnant un terrain et un créneau disponible. La confirmation est instantanée.
+              </div>
+            </div>
+            <!-- Closed item -->
+            <div class="rounded-xl border border-slate-200 overflow-hidden">
+              <button class="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                Quels sont les modes de paiement acceptés ?
+                <svg class="size-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+            <!-- Closed item -->
+            <div class="rounded-xl border border-slate-200 overflow-hidden">
+              <button class="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                Puis-je annuler ou modifier ma réservation ?
+                <svg class="size-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
             </div>
           </div>
         </div>

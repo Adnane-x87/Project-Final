@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProMatch — Validations CNI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'] 
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff4ff',
+                            100: '#dbe6fe',
+                            500: '#3b82f6',
+                            600: '#4da565',
+                            700: '#1d4ed8',
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+    <div class="min-h-screen flex">
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:flex w-64 flex-col fixed inset-y-0 bg-white border-r border-slate-200">
+            
+            <!-- Logo -->
+            <div class="h-20 relative flex items-center justify-center border-b border-slate-100">
+                <a href="./index.html" class="block">
+                    <img src="./images/logo.png" alt="ProMatch Logo" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-auto max-w-none">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 px-4 py-6 space-y-1">
+                <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                    Tableau de bord
+                </a>
+                <a href="./reservations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    Réservations
+                </a>
+                <a href="./validations.html" class="flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg bg-brand-50 text-brand-700">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Validations CNI
+                    <span class="ml-auto w-5 h-5 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 text-xs font-bold">2</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    Clients
+                </a>
+                <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Paramètres
+                </a>
+            </nav>
+
+            <!-- User -->
+            <div class="p-4 border-t border-slate-100">
+                <div class="flex items-center gap-3">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=random" alt="Admin" class="w-9 h-9 rounded-full">
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold text-slate-900 truncate">Administrateur</p>
+                        <p class="text-xs text-slate-500 truncate">admin@promatch.ma</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-64">
+            
+            <!-- Header -->
+            <header class="sticky top-0 z-30 bg-white border-b border-slate-200">
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        </button>
+                        <div>
+                            <h1 class="text-xl font-bold text-slate-900">Validations CNI</h1>
+                            <p class="text-sm text-slate-500">Vérifiez les identités des utilisateurs</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-sm font-medium border border-rose-100">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                            2 demandes en attente
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6 max-w-7xl mx-auto space-y-6">
+
+                <!-- Validation List -->
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <div class="p-5 border-b border-slate-100">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold text-slate-600">YM</div>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900">Yassine Moukrim</h3>
+                                        <p class="text-xs text-slate-500">Inscrit le 12 Fév 2026</p>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium border border-amber-100">En attente</span>
+                            </div>
+                        </div>
+                        <div class="p-5 bg-slate-50/50">
+                            <p class="text-xs font-medium text-slate-500 uppercase mb-3">Document fourni</p>
+                            <div class="relative group aspect-video bg-slate-200 rounded-lg overflow-hidden border border-slate-200">
+                                <img src="https://ui-avatars.com/api/?name=CNI+Recto&background=random&size=512" alt="CNI Recto" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-slate-900/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <button class="px-4 py-2 bg-white rounded-lg text-sm font-semibold text-slate-900 hover:bg-slate-50">Agrandir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-slate-100 flex gap-3">
+                            <button class="flex-1 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors">
+                                Valider
+                            </button>
+                            <button class="flex-1 py-2.5 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition-colors">
+                                Refuser
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                        <div class="p-5 border-b border-slate-100">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold text-slate-600">AH</div>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900">Amine Hassani</h3>
+                                        <p class="text-xs text-slate-500">Inscrit le 14 Fév 2026</p>
+                                    </div>
+                                </div>
+                                <span class="px-2 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium border border-amber-100">En attente</span>
+                            </div>
+                        </div>
+                        <div class="p-5 bg-slate-50/50">
+                            <p class="text-xs font-medium text-slate-500 uppercase mb-3">Document fourni</p>
+                            <div class="relative group aspect-video bg-slate-200 rounded-lg overflow-hidden border border-slate-200">
+                                <img src="https://ui-avatars.com/api/?name=CNI+Recto&background=random&size=512" alt="CNI Recto" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-slate-900/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <button class="px-4 py-2 bg-white rounded-lg text-sm font-semibold text-slate-900 hover:bg-slate-50">Agrandir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5 border-t border-slate-100 flex gap-3">
+                            <button class="flex-1 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-800 transition-colors">
+                                Valider
+                            </button>
+                            <button class="flex-1 py-2.5 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-50 transition-colors">
+                                Refuser
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
