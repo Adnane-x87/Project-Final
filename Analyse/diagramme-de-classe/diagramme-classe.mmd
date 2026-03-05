@@ -1,0 +1,83 @@
+classDiagram
+    class Utilisateur {
+        <<abstract>>
+        -String id
+        -String nom
+        -String prenom
+        -String email
+        -String motDePasse
+        -String telephone
+        +seConnecter()
+        +seDeconnecter()
+    }
+
+    class Proprietaire {
+        +validerReservation(Reservation r)
+        +verifierCNI(String cniUrl)
+    }
+
+    class Locataire {
+        +rechercherTerrain()
+        +reserver(Creneau c, ReservationPayload payload)
+        +annulerReservation(Reservation r)
+    }
+
+    class Employe {
+        +verifierArriveeClient(Reservation r)
+        +consulterPlanning()
+    }
+
+    Utilisateur <|-- Proprietaire
+    Utilisateur <|-- Locataire
+    Utilisateur <|-- Employe
+
+    class Terrain {
+        -String id
+        -String nom
+        -String description
+        -String adresse
+        -Float prixHeure
+        +getCreneauxDisponibles() List
+    }
+
+    class Creneau {
+        -String id
+        -Date date
+        -Time heureDebut
+        -Time heureFin
+        -StatutCreneau statut
+    }
+
+    class StatutCreneau {
+        <<enumeration>>
+        DISPONIBLE
+        RESERVE
+        INDISPONIBLE
+    }
+
+    class Reservation {
+        -String id
+        -String nom
+        -String prenom
+        -String email
+        -String telephone
+        -DateTime dateDepot
+        -Float prix
+        -String cniUrl
+        -StatutReservation statut
+        +confirmer()
+        +annuler()
+    }
+
+    class StatutReservation {
+        <<enumeration>>
+        EN_ATTENTE
+        VALIDEE
+        REFUSEE
+        ANNULEE
+    }
+
+    Proprietaire "1" --> "*" Terrain : gere
+    Terrain "1" *-- "*" Creneau : contient
+    Locataire "1" --> "*" Reservation : effectue
+    Reservation "1" --> "*" Creneau : reserve
