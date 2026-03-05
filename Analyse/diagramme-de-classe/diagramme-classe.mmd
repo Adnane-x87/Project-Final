@@ -18,7 +18,7 @@ classDiagram
 
     class Locataire {
         +rechercherTerrain()
-        +reserver(Creneau c, ReservationPayload payload)
+        +reserver(Creneau c,ReservationPayload payload)
         +annulerReservation(Reservation r)
     }
 
@@ -37,7 +37,7 @@ classDiagram
         -String description
         -String adresse
         -Float prixHeure
-        +getCreneauxDisponibles() List
+        +getCreneauxDisponibles() List~Creneau~
     }
 
     class Creneau {
@@ -76,6 +76,20 @@ classDiagram
         REFUSEE
         ANNULEE
     }
+
+    class Role {
+        -String name
+        -String guard_name
+    }
+
+    class Permission {
+        -String name
+        -String guard_name
+    }
+
+    Utilisateur "*" -- "*" Role : has
+    Role "*" -- "*" Permission : has
+    Utilisateur "*" -- "*" Permission : has_primary
 
     Proprietaire "1" --> "*" Terrain : gere
     Terrain "1" *-- "*" Creneau : contient

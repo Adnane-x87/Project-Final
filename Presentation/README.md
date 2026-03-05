@@ -272,7 +272,7 @@ Share.</p>
 
 <h3>Modélisation des données (MLD)</h3>
 <div class="img-container">
-  <img src="" class="img-methodo" alt="Diagramme de classe">
+  <img src="./images/diagramme-class.png" class="img-methodo" alt="Diagramme de classe">
 </div>
 
 ---
